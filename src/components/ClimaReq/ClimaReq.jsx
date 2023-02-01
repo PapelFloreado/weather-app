@@ -14,7 +14,7 @@ const Clima = () => {
           
           if(location !== ""){
             
-            const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=33354f09a52e51db62c4ac8863ac97d7`
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${import.meta.env.VITE_API_KEY}`
             const {data} = await axios(url)
             setDataWeather(data)
             
